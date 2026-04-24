@@ -1,0 +1,657 @@
+<!--
+  Proyek   : PT Piranti Nusantara Teknologi (Piranusa)
+  File     : pages/aec.html
+  Versi    : 1.0.0
+  Deskripsi: Halaman Solusi AEC — Katalog produk untuk industri Arsitektur, Engineering & Konstruksi
+  Stack    : Tailwind CSS v3 + DaisyUI v4 + Lucide Icons
+-->
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Solusi Software AEC – ZWCAD, Archicad, SketchUp Indonesia | Piranusa</title>
+  <meta name="description"
+        content="Piranusa menyediakan software CAD & BIM terlengkap untuk industri AEC di Indonesia: ZWCAD, Archicad, SketchUp, Chaos Enscape, V-Ray, Corona, Eptar. Lisensi resmi + training.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://piranusa.com/pages/aec.html">
+
+  <!-- OG -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://piranusa.com/pages/aec.html">
+  <meta property="og:title"       content="Solusi Software AEC Indonesia | Piranusa">
+  <meta property="og:description" content="Solusi lengkap software BIM & CAD untuk Arsitektur, Engineering & Konstruksi.">
+  <meta property="og:locale"      content="id_ID">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="id"        href="https://piranusa.com/pages/aec.html">
+  <link rel="alternate" hreflang="x-default" href="https://piranusa.com/pages/aec.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg">
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet">
+
+  <!-- Tailwind Config (same as index) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: '#f7941d', bgDark: '#0f172a', surface: '#1e293b', surface2: '#162032',
+          }
+        }
+      },
+      plugins: [daisyui],
+      daisyui: {
+        themes: [{
+          dark: {
+            "primary":"#f7941d","secondary":"#1e293b","accent":"#f7941d",
+            "neutral":"#0f172a","base-100":"#0f172a","base-200":"#1e293b","base-300":"#334155",
+            "info":"#38bdf8","success":"#34d399","warning":"#fbbf24","error":"#f87272",
+          }
+        }]
+      }
+    }
+  </script>
+
+  <!-- Critical CSS -->
+  <style>
+    body{background-color:#0f172a;color:#f8fafc;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+    #main-nav{position:fixed;top:0;left:0;right:0;z-index:50}
+  </style>
+
+  <!-- Custom CSS (relative path from pages/) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Beranda","item":"https://piranusa.com/"},
+      {"@type":"ListItem","position":2,"name":"Solusi AEC","item":"https://piranusa.com/pages/aec.html"}
+    ]
+  }
+  </script>
+</head>
+
+<body class="antialiased">
+
+  <!-- Skip link -->
+  <a href="#main-content"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded-lg">
+    Langsung ke konten utama
+  </a>
+
+  <!-- ═══ NAVBAR (same structure as index.html) ═══ -->
+  <nav id="main-nav" class="navbar-base" aria-label="Menu utama">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="../index.html" class="flex items-center gap-2.5" aria-label="Piranusa — Halaman Utama">
+          <img src="../assets/logos/Pira-White.png" alt="Piranusa Logo" class="h-8 w-auto"
+               width="120" height="32"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="text-2xl font-black tracking-widest text-white hidden">PIRANUSA</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-7">
+          <a href="../index.html#kategori-produk" class="nav-link">Produk & Solusi</a>
+          <a href="../index.html#tentang"          class="nav-link">Mengapa Kami</a>
+          <a href="../index.html#layanan"          class="nav-link">Training</a>
+          <a href="../index.html#blog"             class="nav-link">Blog</a>
+        </div>
+
+        <!-- Right -->
+        <div class="hidden lg:flex items-center gap-3">
+          <div class="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700"
+               role="group" aria-label="Pilih bahasa">
+            <button class="lang-toggle active" data-lang="id" aria-pressed="true">ID</button>
+            <button class="lang-toggle"        data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a href="../index.html#kontak"
+             class="btn btn-primary btn-sm rounded-lg font-bold text-white border-none px-5"
+             data-i18n="nav.contact">Hubungi Kami</a>
+        </div>
+
+        <!-- Mobile Btn -->
+        <button id="mobile-menu-btn"
+                class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                aria-expanded="false" aria-label="Buka menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+        <a href="../index.html#kategori-produk" class="py-2 text-slate-300 font-semibold hover:text-primary transition-colors">Produk & Solusi</a>
+        <a href="../index.html#tentang"          class="py-2 text-slate-300 font-semibold hover:text-primary transition-colors">Mengapa Kami</a>
+        <a href="../index.html#layanan"          class="py-2 text-slate-300 font-semibold hover:text-primary transition-colors">Training</a>
+        <a href="../index.html#blog"             class="py-2 text-slate-300 font-semibold hover:text-primary transition-colors">Blog</a>
+        <a href="../index.html#kontak" class="btn btn-primary w-full rounded-lg font-bold text-white mt-2">Hubungi Kami</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-16"></div>
+
+  <main id="main-content">
+
+    <!-- ═══ Breadcrumb ═══ -->
+    <nav aria-label="Navigasi breadcrumb"
+         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-0">
+      <ol class="flex items-center gap-2 text-xs text-slate-500"
+          itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="../index.html" class="hover:text-primary transition-colors">
+            <span itemprop="name">Beranda</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name" class="text-primary font-semibold">Solusi AEC</span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ol>
+    </nav>
+
+    <!-- ═══ HERO — AEC ═══ -->
+    <section class="relative py-20 lg:py-28 px-4 overflow-hidden"
+             aria-labelledby="aec-hero-heading">
+      <!-- BG -->
+      <div class="absolute inset-0 hero-bg opacity-70"></div>
+      <div class="absolute inset-0"
+           style="background:radial-gradient(ellipse 60% 50% at 30% 50%, rgba(247,148,29,0.08), transparent)">
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Left: Text -->
+          <div data-animate>
+            <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/25 text-primary
+                        font-bold tracking-widest uppercase text-xs px-4 py-2 rounded-full mb-6">
+              <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+              Solusi AEC
+            </div>
+
+            <h1 id="aec-hero-heading"
+                class="text-3xl md:text-5xl lg:text-5xl font-black leading-tight mb-6">
+              Software CAD & BIM<br>
+              <span class="text-gradient">Terbaik untuk Industri</span><br>
+              Arsitektur & Konstruksi
+            </h1>
+
+            <p class="definition-lead text-slate-300 text-base md:text-lg leading-relaxed mb-8"
+               itemprop="description">
+              Piranusa menyediakan ekosistem software desain arsitektur dan konstruksi yang lengkap —
+              mulai dari drafting CAD 2D, pemodelan BIM 3D, hingga visualisasi render fotorealistis —
+              dengan lisensi resmi, harga kompetitif, dan dukungan teknis lokal.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="../index.html#kontak"
+                 class="btn btn-primary rounded-xl font-bold text-white border-none px-8 btn-pulse">
+                Konsultasi Kebutuhan AEC
+              </a>
+              <a href="#produk-aec"
+                 class="btn btn-outline border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl px-8 font-bold">
+                Lihat Semua Produk
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex gap-8 mt-10">
+              <div>
+                <div class="text-2xl font-black text-gradient">8+</div>
+                <div class="text-xs text-slate-400 font-semibold mt-0.5">Produk AEC</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-gradient">300+</div>
+                <div class="text-xs text-slate-400 font-semibold mt-0.5">Klien Arsitek</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-gradient">100%</div>
+                <div class="text-xs text-slate-400 font-semibold mt-0.5">Lisensi Resmi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Category Visual -->
+          <div class="grid grid-cols-2 gap-4" data-animate-stagger>
+            <!-- Drawing CAD BIM -->
+            <div class="col-span-2 bg-surface border border-slate-700/50 rounded-2xl p-5
+                        hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
+                  <i data-lucide="layers-3" class="w-4 h-4 text-primary"></i>
+                </div>
+                <span class="text-sm font-bold text-white">Drawing CAD BIM</span>
+                <span class="badge badge-primary badge-xs ml-auto">BIM</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="../assets/logos/Product/Archicad_Light_RGB.png"
+                     alt="Archicad" class="h-7 w-auto object-contain">
+                <span class="text-xs text-slate-400">Platform BIM terintegrasi terdepan untuk kolaborasi tim arsitek</span>
+              </div>
+            </div>
+
+            <!-- Drawing CAD -->
+            <div class="bg-surface border border-slate-700/50 rounded-2xl p-5
+                        hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-7 h-7 rounded-lg bg-primary/15 flex items-center justify-center">
+                  <i data-lucide="pen-tool" class="w-3.5 h-3.5 text-primary"></i>
+                </div>
+                <span class="text-xs font-bold text-white">Drawing CAD</span>
+              </div>
+              <img src="../assets/logos/Product/ZWCAD-Putih-New.png"
+                   alt="ZWCAD" class="h-6 w-auto object-contain">
+            </div>
+
+            <!-- Rendering -->
+            <div class="bg-surface border border-slate-700/50 rounded-2xl p-5
+                        hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-7 h-7 rounded-lg bg-primary/15 flex items-center justify-center">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-primary"></i>
+                </div>
+                <span class="text-xs font-bold text-white">Rendering</span>
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <img src="../assets/logos/Product/Chaos Enscape.png" alt="Enscape" class="h-4 w-auto object-contain opacity-80">
+                <img src="../assets/logos/Product/Vray.png"          alt="V-Ray"  class="h-4 w-auto object-contain opacity-80">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ PRODUCT GRID — AEC ═══ -->
+    <section id="produk-aec" class="py-24 lg:py-28 px-4 lg:px-8" aria-labelledby="aec-products-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-16" data-animate>
+          <p class="text-primary font-bold tracking-widest uppercase text-xs mb-4">Produk Unggulan</p>
+          <h2 id="aec-products-heading" class="text-3xl md:text-4xl font-black mb-4">
+            Ekosistem Software Lengkap untuk AEC
+          </h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">
+            Dari drafting 2D, pemodelan BIM, hingga rendering fotorealistis — semua tersedia dengan lisensi resmi dan dukungan teknis lokal.
+          </p>
+        </div>
+
+        <!-- ── Hero Products ── -->
+        <div class="mb-6">
+          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+            <span>Produk Hero</span>
+            <span class="flex-1 h-px bg-slate-800"></span>
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-14" data-animate-stagger>
+
+          <!-- ZWCAD -->
+          <article class="event-card group" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="event-card-img bg-gradient-to-br from-orange-950/50 via-slate-800 to-slate-900 flex items-center justify-center">
+              <div class="text-center p-6">
+                <img src="../assets/logos/Product/ZWCAD-Putih-New.png"
+                     alt="ZWCAD" itemprop="image"
+                     class="h-11 w-auto object-contain mx-auto mb-3"
+                     loading="lazy">
+                <span class="text-xs text-slate-400 font-semibold">Drawing CAD 2D & 3D</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-black" itemprop="name">ZWCAD</h3>
+                <span class="badge badge-primary text-xs font-bold">CAD</span>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-4" itemprop="description">
+                Software CAD profesional berbasis format DWG dengan kompatibilitas penuh terhadap AutoCAD. Lisensi perpetual tersedia — hemat hingga 60% dibanding kompetitor.
+              </p>
+              <ul class="space-y-1.5 mb-5">
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Kompatibel penuh format DWG
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  AI Drafting Assistant (2026)
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Lisensi perpetual & berlangganan
+                </li>
+              </ul>
+              <a href="../index.html#kontak"
+                 class="btn btn-primary w-full rounded-xl text-white font-bold border-none text-sm">
+                Minta Demo & Penawaran
+              </a>
+            </div>
+          </article>
+
+          <!-- Archicad -->
+          <article class="event-card group" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="event-card-img bg-gradient-to-br from-blue-950/50 via-slate-800 to-slate-900 flex items-center justify-center">
+              <div class="text-center p-6">
+                <img src="../assets/logos/Product/Archicad_Light_RGB.png"
+                     alt="Archicad" itemprop="image"
+                     class="h-12 w-auto object-contain mx-auto mb-3"
+                     loading="lazy">
+                <span class="text-xs text-slate-400 font-semibold">BIM Platform</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-black" itemprop="name">Archicad</h3>
+                <span class="badge bg-blue-600 border-blue-600 text-white text-xs font-bold">BIM</span>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-4" itemprop="description">
+                Platform BIM terdepan dari Graphisoft untuk arsitektur profesional. Kolaborasi real-time antar tim, manajemen proyek terintegrasi, dan workflow IFC/open BIM standar.
+              </p>
+              <ul class="space-y-1.5 mb-5">
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Open BIM & IFC Standard
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  BIMcloud kolaborasi real-time
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Graphisoft Certified Partner
+                </li>
+              </ul>
+              <a href="../index.html#kontak"
+                 class="btn btn-primary w-full rounded-xl text-white font-bold border-none text-sm">
+                Minta Demo & Penawaran
+              </a>
+            </div>
+          </article>
+
+          <!-- SketchUp -->
+          <article class="event-card group" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="event-card-img bg-gradient-to-br from-emerald-950/40 via-slate-800 to-slate-900 flex items-center justify-center">
+              <div class="text-center p-6">
+                <img src="../assets/logos/Product/Sketchup White.png"
+                     alt="SketchUp" itemprop="image"
+                     class="h-12 w-auto object-contain mx-auto mb-3"
+                     loading="lazy">
+                <span class="text-xs text-slate-400 font-semibold">3D Modeling</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-black" itemprop="name">SketchUp</h3>
+                <span class="badge bg-emerald-600 border-emerald-600 text-white text-xs font-bold">3D</span>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-4" itemprop="description">
+                Software 3D modeling intuitif dari Trimble, pilihan utama arsitek dan desainer interior. Kaya ekstensi dan integrasi langsung dengan V-Ray dan Enscape untuk rendering.
+              </p>
+              <ul class="space-y-1.5 mb-5">
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  3D Warehouse ekosistem luas
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Integrasi V-Ray & Enscape
+                </li>
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i>
+                  Trimble Authorized Reseller
+                </li>
+              </ul>
+              <a href="../index.html#kontak"
+                 class="btn btn-primary w-full rounded-xl text-white font-bold border-none text-sm">
+                Minta Demo & Penawaran
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ── Additional: Rendering & Visualization ── -->
+        <div class="mb-6">
+          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+            <span>Solusi Rendering & Visualisasi</span>
+            <span class="flex-1 h-px bg-slate-800"></span>
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5" data-animate-stagger>
+
+          <!-- Chaos Enscape -->
+          <article class="service-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2">
+                <img src="../assets/logos/Product/Chaos Enscape.png"
+                     alt="Chaos Enscape" itemprop="image"
+                     class="w-full h-full object-contain"
+                     loading="lazy">
+              </div>
+              <div>
+                <h3 class="text-base font-black" itemprop="name">Chaos Enscape</h3>
+                <span class="text-xs text-slate-500">Real-time Render</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-5" itemprop="description">
+              Plugin rendering real-time untuk Archicad, SketchUp, dan Revit. Visualisasi walkthrough langsung dalam model tanpa render lama.
+            </p>
+            <a href="../index.html#kontak" class="text-primary text-xs font-bold hover:underline">
+              Minta Penawaran →
+            </a>
+          </article>
+
+          <!-- Chaos V-Ray -->
+          <article class="service-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2">
+                <img src="../assets/logos/Product/Vray.png"
+                     alt="Chaos V-Ray" itemprop="image"
+                     class="w-full h-full object-contain"
+                     loading="lazy">
+              </div>
+              <div>
+                <h3 class="text-base font-black" itemprop="name">Chaos V-Ray</h3>
+                <span class="text-xs text-slate-500">Fotorealistis</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-5" itemprop="description">
+              Render engine industri standar untuk arsitektur. Hasil fotorealistis berkualitas tinggi yang digunakan studio desain kelas dunia.
+            </p>
+            <a href="../index.html#kontak" class="text-primary text-xs font-bold hover:underline">
+              Minta Penawaran →
+            </a>
+          </article>
+
+          <!-- Chaos Corona -->
+          <article class="service-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2">
+                <img src="../assets/logos/Product/Corona.png"
+                     alt="Chaos Corona" itemprop="image"
+                     class="w-full h-full object-contain"
+                     loading="lazy">
+              </div>
+              <div>
+                <h3 class="text-base font-black" itemprop="name">Chaos Corona</h3>
+                <span class="text-xs text-slate-500">Unbiased Render</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-5" itemprop="description">
+              Render engine unbiased yang dikenal untuk kemudahan penggunaan dan kualitas pencahayaan alami yang luar biasa pada visualisasi arsitektur.
+            </p>
+            <a href="../index.html#kontak" class="text-primary text-xs font-bold hover:underline">
+              Minta Penawaran →
+            </a>
+          </article>
+
+          <!-- Eptar -->
+          <article class="service-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center p-2">
+                <img src="../assets/logos/Product/Eptar.png"
+                     alt="Eptar" itemprop="image"
+                     class="w-full h-full object-contain"
+                     loading="lazy">
+              </div>
+              <div>
+                <h3 class="text-base font-black" itemprop="name">Eptar</h3>
+                <span class="text-xs text-slate-500">Archicad Plugin</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-5" itemprop="description">
+              Plugin Archicad untuk desain mekanikal, elektrikal, dan plumbing (MEP) yang terintegrasi langsung dalam lingkungan BIM Archicad.
+            </p>
+            <a href="../index.html#kontak" class="text-primary text-xs font-bold hover:underline">
+              Minta Penawaran →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ WORKFLOW SECTION ═══ -->
+    <section class="py-20 px-4 lg:px-8 bg-surface" aria-labelledby="workflow-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-12" data-animate>
+          <p class="text-primary font-bold tracking-widest uppercase text-xs mb-4">Alur Kerja AEC</p>
+          <h2 id="workflow-heading" class="text-2xl md:text-3xl font-black mb-4">
+            Satu Ekosistem dari Konsep hingga Konstruksi
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4" data-animate-stagger>
+          <div class="text-center p-6 rounded-2xl bg-bgDark border border-slate-700/50 relative">
+            <div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="pen-tool" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div class="text-xs font-bold text-primary mb-1">Tahap 1</div>
+            <h3 class="text-sm font-black mb-2">Drafting CAD 2D</h3>
+            <p class="text-xs text-slate-400">ZWCAD untuk gambar teknik presisi</p>
+            <!-- Arrow -->
+            <div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 z-10">
+              <i data-lucide="chevron-right" class="w-5 h-5 text-slate-600"></i>
+            </div>
+          </div>
+
+          <div class="text-center p-6 rounded-2xl bg-bgDark border border-slate-700/50 relative">
+            <div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="layers-3" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div class="text-xs font-bold text-primary mb-1">Tahap 2</div>
+            <h3 class="text-sm font-black mb-2">Pemodelan BIM</h3>
+            <p class="text-xs text-slate-400">Archicad untuk model bangunan cerdas</p>
+            <div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 z-10">
+              <i data-lucide="chevron-right" class="w-5 h-5 text-slate-600"></i>
+            </div>
+          </div>
+
+          <div class="text-center p-6 rounded-2xl bg-bgDark border border-slate-700/50 relative">
+            <div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="box" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div class="text-xs font-bold text-primary mb-1">Tahap 3</div>
+            <h3 class="text-sm font-black mb-2">3D Modeling</h3>
+            <p class="text-xs text-slate-400">SketchUp untuk eksplorasi desain cepat</p>
+            <div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 z-10">
+              <i data-lucide="chevron-right" class="w-5 h-5 text-slate-600"></i>
+            </div>
+          </div>
+
+          <div class="text-center p-6 rounded-2xl bg-bgDark border border-slate-700/50">
+            <div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="sparkles" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div class="text-xs font-bold text-primary mb-1">Tahap 4</div>
+            <h3 class="text-sm font-black mb-2">Rendering</h3>
+            <p class="text-xs text-slate-400">Enscape / V-Ray / Corona untuk presentasi</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section class="py-20 px-4 lg:px-8 bg-bgDark" aria-labelledby="aec-cta-heading">
+      <div class="max-w-2xl mx-auto text-center" data-animate>
+        <p class="text-primary font-bold tracking-widest uppercase text-xs mb-4">Mulai Sekarang</p>
+        <h2 id="aec-cta-heading" class="text-3xl md:text-4xl font-black mb-5">
+          Siap Meningkatkan Produktivitas Tim AEC Anda?
+        </h2>
+        <p class="text-slate-400 mb-8">
+          Konsultasikan kebutuhan software AEC perusahaan Anda dengan tim ahli kami.
+          Gratis, tanpa komitmen.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="../index.html#kontak"
+             class="btn btn-primary rounded-xl font-bold text-white border-none px-10 btn-pulse">
+            Konsultasi Gratis Sekarang
+          </a>
+          <a href="mfg.html"
+             class="btn btn-outline border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl px-8 font-bold">
+            Lihat Solusi MFG
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER (simplified) ═══ -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-10 px-4 lg:px-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5">
+      <div class="flex items-center gap-3">
+        <img src="../assets/logos/Pira-White.png" alt="Piranusa" class="h-7 w-auto"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="text-xl font-black tracking-widest text-white hidden">PIRANUSA</span>
+        <span class="text-slate-600">·</span>
+        <span class="text-sm text-slate-400">PT Piranti Nusantara Teknologi</span>
+      </div>
+      <nav class="flex flex-wrap gap-5 text-sm" aria-label="Footer navigasi">
+        <a href="../index.html"            class="text-slate-400 hover:text-primary transition-colors">Beranda</a>
+        <a href="mfg.html"                 class="text-slate-400 hover:text-primary transition-colors">Solusi MFG</a>
+        <a href="../index.html#layanan"    class="text-slate-400 hover:text-primary transition-colors">Training</a>
+        <a href="../index.html#kontak"     class="text-slate-400 hover:text-primary transition-colors">Kontak</a>
+      </nav>
+      <p class="text-xs text-slate-600">© 2026 PT Piranti Nusantara Teknologi</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../js/script.js" defer></script>
+
+</body>
+</html>
