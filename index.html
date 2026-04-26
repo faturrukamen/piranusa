@@ -58,7 +58,6 @@
         extend: {
           fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
           colors: {
-            primary:   '#f7941d',
             bgDark:    '#0f172a',
             surface:   '#1e293b',
             surface2:  '#162032',
@@ -67,21 +66,75 @@
       },
       plugins: [daisyui],
       daisyui: {
-        themes: [{
-          dark: {
-            "primary":   "#f7941d",
-            "secondary": "#1e293b",
-            "accent":    "#f7941d",
-            "neutral":   "#0f172a",
-            "base-100":  "#0f172a",
-            "base-200":  "#1e293b",
-            "base-300":  "#334155",
-            "info":      "#38bdf8",
-            "success":   "#34d399",
-            "warning":   "#fbbf24",
-            "error":     "#f87272",
+        themes: [
+          {
+            dark: {
+              "primary":   "#f7941d",
+              "secondary": "#1e293b",
+              "accent":    "#f7941d",
+              "neutral":   "#0f172a",
+              "base-100":  "#0f172a",
+              "base-200":  "#1e293b",
+              "base-300":  "#334155",
+              "info":      "#38bdf8",
+              "success":   "#34d399",
+              "warning":   "#fbbf24",
+              "error":     "#f87272",
+            },
+            themeBlue: {
+              "primary":   "#2563eb",
+              "secondary": "#1e293b",
+              "accent":    "#3b82f6",
+              "neutral":   "#0f172a",
+              "base-100":  "#0f172a",
+              "base-200":  "#1e293b",
+              "base-300":  "#334155",
+              "info":      "#38bdf8",
+              "success":   "#34d399",
+              "warning":   "#fbbf24",
+              "error":     "#f87272",
+            },
+            themeTeal: {
+              "primary":   "#14b8a6",
+              "secondary": "#1e293b",
+              "accent":    "#0d9488",
+              "neutral":   "#0f172a",
+              "base-100":  "#0f172a",
+              "base-200":  "#1e293b",
+              "base-300":  "#334155",
+              "info":      "#38bdf8",
+              "success":   "#34d399",
+              "warning":   "#fbbf24",
+              "error":     "#f87272",
+            },
+            themePurple: {
+              "primary":   "#8b5cf6",
+              "secondary": "#1e293b",
+              "accent":    "#7c3aed",
+              "neutral":   "#0f172a",
+              "base-100":  "#0f172a",
+              "base-200":  "#1e293b",
+              "base-300":  "#334155",
+              "info":      "#38bdf8",
+              "success":   "#34d399",
+              "warning":   "#fbbf24",
+              "error":     "#f87272",
+            },
+            themeRed: {
+              "primary":   "#e11d48",
+              "secondary": "#1e293b",
+              "accent":    "#be123c",
+              "neutral":   "#0f172a",
+              "base-100":  "#0f172a",
+              "base-200":  "#1e293b",
+              "base-300":  "#334155",
+              "info":      "#38bdf8",
+              "success":   "#34d399",
+              "warning":   "#fbbf24",
+              "error":     "#f87272",
+            }
           }
-        }]
+        ]
       }
     }
   </script>
@@ -1673,6 +1726,9 @@
 
     </div>
   </footer>
+
+  <!-- Color Theme Panel -->
+  <script src="js/theme-panel.js"></script>
 
   <!-- ═══ Scripts ═══ -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
